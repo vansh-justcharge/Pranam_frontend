@@ -57,8 +57,8 @@ export default function AuthPage() {
 
     const url =
       mode === "signin"
-        ? "http://localhost:5000/api/v1/auth/login"
-        : "http://localhost:5000/api/v1/auth/register";
+        ? `${import.meta.env.VITE_API_URL}/api/v1/auth/login`
+        : `${import.meta.env.VITE_API_URL}/api/v1/auth/register`;
 
     console.log('🌐 API URL:', url);
 

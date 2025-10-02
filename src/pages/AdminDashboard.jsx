@@ -79,7 +79,7 @@ const AdminDashboard = () => {
       };
 
       const endpoint = endpoints[activeTab] || endpoints.overview;
-      const response = await fetch(`http://localhost:5000${endpoint}`, {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}${endpoint}`, {
         headers: {
           'Authorization': `Bearer ${auth.token}`,
           'Content-Type': 'application/json'
@@ -264,7 +264,7 @@ const AdminDashboard = () => {
   const handleCreateBlog = async (blogData) => {
     try {
       setLoading(true);
-      const response = await fetch('http://localhost:5000/api/admin/blogs', {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/admin/blogs`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -295,7 +295,7 @@ const AdminDashboard = () => {
     }
 
     try {
-      const response = await fetch(`http://localhost:5000/api/admin/blogs/${blogId}`, {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/admin/blogs/${blogId}`, {
         method: 'DELETE',
         headers: {
           'Authorization': `Bearer ${auth.token}`

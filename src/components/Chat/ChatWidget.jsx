@@ -25,7 +25,7 @@ const ChatWidget = () => {
     try {
       setLoading(true);
       console.log("Starting chat with message:", message);
-      const response = await fetch('http://localhost:5000/api/chat/start', {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/chat/start`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -78,7 +78,7 @@ const ChatWidget = () => {
     try {
       setLoading(true);
       console.log("Sending message to conversation:", conversationId);
-      const response = await fetch(`http://localhost:5000/api/chat/${conversationId}/message`, {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/chat/${conversationId}/message`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

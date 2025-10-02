@@ -9,7 +9,7 @@ const TestAPI = () => {
     setResult('Testing questions API...');
     
     try {
-      const response = await fetch('http://localhost:5000/api/forms/questions', {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/forms/questions`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -36,7 +36,7 @@ const TestAPI = () => {
     setResult('Testing chat API...');
     
     try {
-      const response = await fetch('http://localhost:5000/api/chat/start', {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/chat/start`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -61,7 +61,7 @@ const TestAPI = () => {
     setResult('Testing backend health...');
     
     try {
-      const response = await fetch('http://localhost:5000/health');
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/health`);
       const data = await response.json();
       setResult(`Backend Health: ${JSON.stringify(data, null, 2)}`);
     } catch (error) {

@@ -44,7 +44,7 @@ const Questions = () => {
     console.log("Sending request to backend...");
 
     try {
-      const response = await fetch("http://localhost:5000/api/forms/questions", {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/forms/questions`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -101,7 +101,7 @@ const Questions = () => {
     console.log("Submitting comment:", comment);
 
     try {
-      const response = await fetch("http://localhost:5000/api/forms/questions", {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/forms/questions`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

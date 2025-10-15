@@ -1,10 +1,10 @@
 import React from "react";
-import { FaHeart, FaPlay } from "react-icons/fa";
+import { FaPlay } from "react-icons/fa";
 import heart from "../../assets/Icons/solar_heart-bold.svg";
 import heart_bold from "../../assets/Icons/solar_heart-bold.png";
-import button from '../../assets/Icons/Button.png'
-import moment_one from '../../assets/Images/momets_one.jpg'
-import moment_two from '../../assets/Images/moment_two.jpg'
+import button from '../../assets/Icons/Button.png';
+import moment_one from '../../assets/Images/momets_one.jpg';
+import moment_two from '../../assets/Images/moment_two.jpg';
 
 const moments = [
   {
@@ -23,13 +23,14 @@ const moments = [
 
 const Moments = () => {
   return (
-    <div className="w-full max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-10 py-12 px-6 font-bricolage">
+    <div className="w-full max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-10 py-12 px-4 md:px-6 font-bricolage">
+      
       {/* Left - Reels Cards */}
-      <div className="flex gap-12 overflow-x-auto md:overflow-visible pb-4 md:pb-0 relative">
+      <div className="flex gap-6 md:gap-12 overflow-x-auto md:overflow-visible pb-4 md:pb-0 relative w-full md:w-auto">
         {moments.map((moment) => (
           <div
             key={moment.id}
-            className="relative w-[300px] h-[500px] md:w-44 md:h-80 lg:w-56 lg:h-96 flex-shrink-0 rounded-2xl overflow-hidden shadow-lg flex flex-col justify-between"
+            className="relative w-64 h-80 md:w-44 md:h-80 lg:w-56 lg:h-96 flex-shrink-0 rounded-2xl overflow-hidden shadow-lg flex flex-col justify-between"
             style={{
               backgroundImage: `url(${moment.image})`,
               backgroundSize: "cover",
@@ -49,7 +50,7 @@ const Moments = () => {
                 <span>{moment.platform}</span>
               </div>
               <div className="rounded-[14px] bg-[#FFFFFF66] text-white px-3 py-2">
-                <img src={moment.i} alt=""/>
+                <img src={moment.i} alt="like" className="w-4 h-4 md:w-5 md:h-5"/>
               </div>
             </div>
           </div>
@@ -57,13 +58,13 @@ const Moments = () => {
 
         {/* Next button (hidden on small, visible on md+) */}
         <button className="hidden md:flex w-14 h-14 bg-black absolute right-[-25px] text-white rounded-full items-center justify-center self-center shadow-md">
-         <img src={button} width={28} height={28} ></img>
+          <img src={button} width={28} height={28} alt="next"/>
         </button>
       </div>
 
       {/* Right - Testimonial */}
-      <div className="flex flex-col text-left ml-8">
-        <h2 className="text-lg md:text-[32px] font-semibold text-[#5B575F] mb-4 tracking-wide"style={{letterSpacing : "0%", lineHeight: "100%" }} >
+      <div className="flex flex-col text-left md:ml-8 w-full md:w-auto">
+        <h2 className="text-lg md:text-[32px] font-semibold text-[#5B575F] mb-4 tracking-wide" style={{letterSpacing : "0%", lineHeight: "100%"}}>
           SOME 'AHA' MOMENTS OF <br /> PRANAM BANDHUS –
         </h2>
         <p className="text-[#737373] mb-2 text-[16px] md:text-lg font-semibold" style={{letterSpacing : "-4%", lineHeight : "100%"}}>
@@ -72,13 +73,12 @@ const Moments = () => {
           journey of self-discovery and self-love.
         </p>
 
-
         {/* Hindi text */}
-        <p className="text-[#727EA7] mb-4 max-w-lg leading-relaxed text-sm md:text-[15px] mt-12" style={{letterSpacing : "0%" , lineHeight : "24px"}}>
+        <p className="text-[#727EA7] mb-4 max-w-full md:max-w-lg leading-relaxed text-sm md:text-[15px] mt-6 md:mt-12" style={{letterSpacing : "0%" , lineHeight : "24px"}}>
           जब से सृष्टि बनी तब से सब याद रहना समझ लेना सारे रहस्य सारा सत्य ज्ञान यह <br /> मनुस्मृति है। गीता में श्रीकृष्ण ने यह सत्य स्वीकारा है कि सारे तथ्य सत्य को सबसे <br /> पहले मनु प्रथम मानव ने अपने पिता सूर्य से जाना- सत्य ऊर्जा स्रोत से। बाद में यह  <br />ज्ञान-रहस्य ऋषियों ने जाना पर धीरे-धीरे यह ज्ञान लुप्त हो गया। अर्जुन को यह ज्ञान <br />श्रीकृष्ण ने गीता बता बताकर दिया। ना जाने
         </p>
 
-        <p className="font-semibold text-end text-[#6D758F]">Sinha Kumari</p>
+        <p className="font-semibold text-end text-[#6D758F] mt-2 md:mt-4">Sinha Kumari</p>
       </div>
     </div>
   );

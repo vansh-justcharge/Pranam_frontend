@@ -20,7 +20,7 @@ const Footer = () => {
     setMessage("");
 
     try {
-      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/newsletter/subscribe`, {
+      const response = await fetch("http://localhost:5000/api/newsletter/subscribe", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -70,7 +70,7 @@ const Footer = () => {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           disabled={loading}
-          className="px-6 py-2 rounded-md border bg-[#F7EDFF00] border-[#BCC571] w-96 focus:outline-none disabled:opacity-50"
+          className="px-6 py-2 rounded-md border bg-[#F7EDFF00] border-[#BCC571] w-72 sm:w-96 focus:outline-none disabled:opacity-50"
         />
         <button
           type="submit"

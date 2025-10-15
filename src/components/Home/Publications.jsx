@@ -72,7 +72,7 @@ const Publications = () => {
 
             {/* Button Section */}
             <div className="flex flex-col items-start md:items-end">
-              <button className="px-4 py-3   rounded-[16px] w-[310px] bg-white text-black text-[18px] font-medium shadow-xl border">
+              <button className="px-4 py-3   rounded-[16px] w-[280px] sm:w-[310px] bg-white text-black text-[18px] font-medium shadow-xl border">
                 Your Question/Quest/comments
               </button>
               <p className="text-[18px] text-[#737373D9] mt-4 mr-12 font-semibold">

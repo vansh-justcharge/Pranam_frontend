@@ -14,8 +14,8 @@ const Hero = () => {
           <h1 className="text-3xl md:text-4xl lg:text-[40px] font-bold text-[#BCC571] mt-2 uppercase font-bricolage" style={{ lineHeight: "100%" , letterSpacing: "0%" }}>
             Welcome to Pranam
           </h1>
-          <div className="mt-2 text-[#5B575F]   w-full mr-24 leading-relaxed bg-gradient-to-b from-[#EFF1DD] to-[#EFF1DD00] py-6 font-semibold ">
-            <p className="w-[468px] text-[23px]" style={{ letterSpacing: "-4%" , lineHeight: "100%" }}>
+          <div className="mt-2 text-[#5B575F]   w-full  sm:mr-24 leading-relaxed bg-gradient-to-b from-[#EFF1DD] to-[#EFF1DD00] py-6 font-semibold ">
+            <p className="w-[280px] sm:w-[468px] text-[16px] sm:text-[23px]" style={{ letterSpacing: "-4%" , lineHeight: "100%" }}>
             Pranam is a movement based on Truth <br />Love Karm and Light for spiritual <br /> blossoming, towards <br />
             a new dawn of humanity. Where <br /> transformation at the spiritual social <br /> political and economic <br />
             spheres is guided by the eternal truth of <br /> Laws of Nature.
